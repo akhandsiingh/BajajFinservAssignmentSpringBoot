@@ -55,9 +55,8 @@ public class WebhookService {
 
         HttpEntity<Map<String, String>> sqlEntity = new HttpEntity<>(sqlBody, webhookHeaders);
 
-        ResponseEntity<String> webhookResponse =
-                restTemplate.postForEntity(webhookUrl, sqlEntity, String.class);
 
-        System.out.println("🟢 Webhook submitted: " + webhookResponse.getStatusCode());
+
+        System.out.println("Webhook submitted: " + webhookResponse.getStatusCode());
     }
 }
