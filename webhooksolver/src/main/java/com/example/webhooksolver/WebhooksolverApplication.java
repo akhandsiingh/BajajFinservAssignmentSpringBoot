@@ -16,10 +16,6 @@ public class WebhooksolverApplication {
 	public RestTemplate restTemplate() {
 		return new RestTemplate();
 	}
-	@Bean
-	public CommandLineRunner commandLineRunner(WebhookService service) {
-		return args -> {
-			service.executeFlow();
-		};
+
 	}
 }
